@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0f;
+  --color-foreground: #e4e4eb;
+  --color-card: #12121a;
+  --color-card-foreground: #e4e4eb;
+  --color-muted: #1c1c28;
+  --color-muted-foreground: #8b8ba0;
+  --color-border: #2a2a3d;
+  --color-primary: #22d3ee;
+  --color-primary-foreground: #0a0a0f;
+  --color-accent: #a78bfa;
+  --color-accent-foreground: #0a0a0f;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fef2f2;
+  --color-success: #22c55e;
+  --color-success-foreground: #0a0a0f;
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #0a0a0f;
+  --color-ring: #22d3ee;
+  --radius: 0.75rem;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes mining-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-mining-spin {
+  animation: mining-spin 1s linear infinite;
+}
